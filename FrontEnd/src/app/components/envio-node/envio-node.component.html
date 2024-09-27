@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="one">
+    <fieldset class="file-upload">
+      <legend><h3>Base de Datos (Access)</h3></legend>
+      <label for="file-input">Seleccionar archivo</label>
+      <input type="file" id="file-input" style="display: none;" (change)="seleccionarArchivo($event)" accept=".mdb" /><!--Aqui en accept poner el formato aceptado "json o mdb"-->
+      <p class="file-info"></p>
+      <button (click)="confirmarSeleccion()">Aceptar</button>
+    </fieldset>
+  </div>
+  
+  <div class="two">
+    <fieldset class="file-upload">
+      <legend><h3>Seleccionar archivo JSON</h3></legend>
+    
+      <label for="file-input-json">Seleccionar archivo JSON</label>
+      <input type="file" id="file-input-json" style="display: none;" (change)="onFileSelected($event)" accept=".json" />
+      <p class="file-info"></p>
+      <button (click)="onConfirm()">Aceptar</button>
+    
+      </fieldset>
+  </div>
+  
+</div>
+
+  <div *ngIf="loadingjson" class="spinner-overlay">
+    <div class="spinner"></div>
+  </div>
+  <p *ngIf="funRespuestaNodejs">{{ funRespuestaNodejs.message }}</p>
+  <p *ngIf="funRespuestaNodejs">{{ funRespuestaNodejs.result }}</p>
+  <p></p>
+  <p></p>
+ 
+  <div *ngIf="loadingAcces" class="spinner-overlay">
+    <div class="spinner"></div>
+  </div>
+<p></p>
+<div class="formulario">
+  <div class="auxiliar"></div>
+  <form (ngSubmit)="enviarDato()" #form="ngForm" class="search-form">
+    <input type="text" [(ngModel)]="userData.inputData" name="inputData" required class="search-input" placeholder="Escriba el numero de CI">
+    <button type="submit" class="search-button">Buscar</button>
+    <!--<button (click)="llamandoTikeos()">Actualizar</button>-->
+      
+  </form>
+</div>
+
+
+
+<app-tikeos></app-tikeos>
+
+  

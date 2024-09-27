@@ -1,0 +1,98 @@
+
+.subtitulo{
+    //padding-left: 5%;
+ } 
+ 
+  //Data table
+  .my-table {
+    
+    border-collapse: collapse;
+    border-bottom: 5px solid;
+    
+  }
+  section{
+    //margin-left: 5%;
+    //margin-right: 5%;
+    //text-align: end;
+    
+    }
+  .filtros{
+    text-align: end;
+    border-bottom: 5px solid;
+    
+  }
+  /*
+  .my-table .mat-header-cell,
+  .my-table .mat-cell {
+    text-align: center; // Esto centra el contenido 
+  }
+ */
+    .mat-column-USERID {
+       width: 32px ;
+       border-right : 0.5px solid;
+       border-left: 1px solid;
+       border-top: 1px solid;
+       text-align: center;
+       
+    }
+    .mat-column-Name {
+      width: 32px ;
+      border-right : 0.5px solid;
+      //border-left: 1px solid;
+      border-top: 1px solid;
+      text-align: center;
+      
+   }
+   .mat-column-Badgenumber {
+    width: 32px ;
+    border-right : 0.5px solid;
+    //border-left: 1px solid;
+    border-top: 1px solid;
+    text-align: center;
+    
+ }
+ .mat-column-Mes {
+  width: 32px ;
+  border-right : 0.5px solid;
+  //border-left: 1px solid;
+  border-top: 1px solid;
+  text-align: center;
+  
+}
+.mat-column-FECHA {
+  width: 32px ;
+  border-right : 0.5px solid;
+  //border-left: 1px solid;
+  border-top: 1px solid;
+  text-align: center;
+  
+}
+@for $i from 0 through 9 {
+  .mat-column-time#{$i} {
+    border-right : 0.5px solid;
+    
+      width: 32px;
+      border-top: 1px solid;
+      text-align: center;
+    }
+  }
+
+  .custom-width {
+      width: 150px; /* O el valor que desees */
+    }
+.custom-width mat-select,
+.custom-width input {
+  width: 50%; /* Asegúrate de que el contenido ocupe el 100% del contenedor */
+}
+  
+
+  
+  .paginator{
+    border-top: 5px solid;
+    padding-bottom: 2%;
+  }
+  /*
+  .mat-table-mat-elevation-z8{
+     margin-left: 10%;
+     padding-left: 20%;
+  }*/
